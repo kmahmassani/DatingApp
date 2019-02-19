@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.http.get('http://localhost:5000/api/values').subscribe();
+  }
 
   registerToggle() {
     this.registerMode = true;
